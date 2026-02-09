@@ -19,7 +19,7 @@ public class ProductRepositoryTest {
     ProductRepository productRepository;
 
     @BeforeEach
-    void seUp(){
+    void setUp(){
     }
 
     @Test
@@ -66,4 +66,28 @@ public class ProductRepositoryTest {
         assertEquals(product2.getProductId(), savedProduct.getProductId());
         assertFalse(productIterator.hasNext());
     }
+
+    @Test
+    void testEdit(){
+        Product product = new Product();
+        product.setProductId("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(100);
+        productRepository.create(product);
+
+        // edit
+        Product editedProduct = new Product();;
+        editedProduct.setProductId("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        editedProduct.setProductName("Sampo Anti Ketombe");
+        editedProduct.setProductQuantity(150);
+
+        productRepository.update(editedProduct);
+
+        // cek
+        Product updated = productRepository.findById("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        assertNotNull(updated);
+        assertEquals("Sampo Anti Ketombe", updated.getProductName());
+        assertEquals(150, updated.getProductQuantity());
+    }
+
 }
