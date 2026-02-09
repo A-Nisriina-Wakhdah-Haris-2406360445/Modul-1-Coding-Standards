@@ -83,11 +83,15 @@ public class ProductRepositoryTest {
 
         productRepository.update(editedProduct);
 
-        // cek
+        // positive case
         Product updated = productRepository.findById("eb558e9f-1c39-460e-8860-71af6af63bd6");
         assertNotNull(updated);
         assertEquals("Sampo Anti Ketombe", updated.getProductName());
         assertEquals(150, updated.getProductQuantity());
+
+        // negative case
+        assertNotEquals("Sampo Cap Bambang", updated.getProductName());
+        assertNotEquals(100, updated.getProductQuantity());
     }
 
 }
