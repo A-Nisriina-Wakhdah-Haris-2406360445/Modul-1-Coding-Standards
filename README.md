@@ -1,4 +1,5 @@
-##REFLECTION 1##
+<details>
+<Summary><b>Refleksi 1</b></Summary>
 Berikut ini adalah clean code principles yang telah saya gunakan dalam mengimplementasikan dua fitur baru menggunakan 
 Spring Boot, yaitu:
 1. Meaningful names: Dalam membuat kode untuk mengimplementasikan kedua fitur tersebut saya menggunakan prinsip meaningful
@@ -16,3 +17,4 @@ dan editProduct.html dengan menambahkan atribut required pada field productName 
 tidak bisa kosong. Pada createProduct.html saya menambahkan ketentuan min="1" input productQuantity, karena saat user
 membuat prduct baru, jumlah stok minimalnya yang diizinkan adalah 1 dan tidak bisa nol. Selain itu, pada editProduct.html saya menambahkan ketentuan
 min="0" pada input field productQuantity karena stok barang yang telah terdaftar di dalam list produk bisa saja habis (bernilai nol).
+</details>
