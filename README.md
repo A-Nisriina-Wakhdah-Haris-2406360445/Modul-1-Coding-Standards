@@ -1,3 +1,7 @@
+Nama: Nisriina Wakhdah Haris
+NPM: 2406360445
+Kelas: ProLan - A
+
 <details>
 <Summary><b>Refleksi 1</b></Summary>
 Berikut ini adalah clean code principles yang telah saya gunakan dalam mengimplementasikan dua fitur baru menggunakan
