@@ -21,5 +21,6 @@ Saya juga menerapkan secure coding practice berupa input data validation. Valida
 dan editProduct.html dengan menambahkan atribut required pada field productName dan productQuantity agar field tersebut
 tidak bisa kosong. Pada createProduct.html saya menambahkan ketentuan min="1" input productQuantity, karena saat user
 membuat prduct baru, jumlah stok minimalnya yang diizinkan adalah 1 dan tidak bisa nol. Selain itu, pada editProduct.html saya menambahkan ketentuan
-min="0" pada input field productQuantity karena stok barang yang telah terdaftar di dalam list produk bisa saja habis (bernilai nol).
+min="0" pada input field productQuantity karena stok barang yang telah terdaftar di dalam list produk bisa saja habis (bernilai nol) dan saya menambahkan anotasi validasi seperti
+@NotBlank dan @Min pada model agar
 </details>
