@@ -124,7 +124,7 @@ public class ProductRepositoryTest {
         // positive case
         assertNull(productRepository.findById("eb558e9f-1c39-460e-8860-71af6af63bd6"));
         Iterator<Product> productIterator = productRepository.findAll();
-        assertFalse(productIterator.hasNext());
+        assertFalse(productIterator.hasNext());     // deletion succeeds
 
         // negative case
         Product product2 = new Product();
@@ -134,9 +134,12 @@ public class ProductRepositoryTest {
         productRepository.create(product2);
 
         productRepository.deleteById("12345");  // delete by the wrong product id (unexisted)
-
         assertNotNull(productRepository.findById("123"));
-        assertTrue(productIterator.hasNext());
+
+        Iterator<Product> iteratorAfterWrongDeletion = productRepository.findAll();
+        assertTrue(iteratorAfterWrongDeletion.hasNext());
+
+
     }
 
 }
