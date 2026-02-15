@@ -60,6 +60,4 @@ public class ProductController {
         service.deleteById(id);
         return "redirect:/product/list";
     }
-
-
 }
