@@ -30,7 +30,7 @@ public class ProductControllerTests {
   void testCreateProductPage() throws Exception {
     mockMVC.perform(get("/product/create"))
         .andExpect(status().isOk())
-        .andExpect(view().name("createProduct"))
+        .andExpect(view().name("CreateProduct"))
         .andExpect(model().attributeExists("product"));
 
   }
