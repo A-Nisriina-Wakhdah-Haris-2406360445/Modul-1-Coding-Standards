@@ -1,3 +1,5 @@
+# Add SonarCloud
+
 name: SonarCloud Analysis
 
 on:
