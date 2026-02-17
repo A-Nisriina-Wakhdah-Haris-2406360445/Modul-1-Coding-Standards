@@ -86,7 +86,7 @@ tasks.jacocoTestReport {
 sonar {
     properties {
         property("sonar.projectKey", "A-nisriina-wakhdah-haris-2406360445_Modul-2-CI-CD-DevOps")
-        property("sonar.organization", "a-nisriina-wakhdah-haris-2406360445")
+        property("sonar.organization", "A-nisriina-wakhdah-haris-2406360445")
         property("sonar.host.url", "https://sonarcloud.io")
         property("sonar.java.source", "21")
     }
